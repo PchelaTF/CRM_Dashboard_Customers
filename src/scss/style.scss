@@ -4,6 +4,7 @@
 $mainTextColor: #000;
 $secondTextColor: #b5b7c0;
 $sideTextColor: #9197b3;
+$tableTextColor: #292d32;
 // =================================
 
 body {
@@ -135,36 +136,102 @@ body {
 .greeting {
 	font-size: 24px;
 	letter-spacing: 0;
+	// margin: 41px 0 0 69px;
+	margin: 45px 0 0 70.5px;
 }
 
 .product {
+	margin: 55px 78px 0 88px;
+	box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+	border-radius: 30px;
+	background-color: #fff;
+
 	&__header {
+		display: flex;
+		justify-content: space-between;
+		padding: 35px 70px 40px 38px;
 	}
 
-	&__name {
+	&__wrapper {
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: 22px;
+
+		&:not(:last-child) {
+			margin-bottom: 13px;
+		}
+	}
+
+	&__subtitle {
+		font-weight: 400;
+		font-size: 14px;
+		color: #16c098;
 	}
 
 	&__body {
+		display: flex;
+		flex-direction: column;
+		overflow-x: auto;
 	}
 
 	&__body-header {
+		display: grid;
+		grid-template-columns: 20% 15.1% 18.2% 24% 17.5% auto;
+		border-bottom: 1px solid #eeeeee;
+		padding: 0 67px 14px 38px;
+		color: $secondTextColor;
+
+		&:last-child {
+			justify-content: center;
+		}
 	}
 
 	&__body-row {
 	}
 
 	&__footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 30px 41px 40px 38px;
 	}
 
 	&__footer-total {
+		color: $secondTextColor;
 	}
 
 	&__footer-pagination {
 	}
 }
+
 .search {
+	display: flex;
+	align-items: center;
+	background: #f9fbff;
+	border-radius: 10px;
+	padding: 7px 8px;
+	gap: 8px;
+
+	& input {
+		background-color: #f9fbff;
+		font-weight: 400;
+		font-size: 12px;
+		color: $secondTextColor;
+		line-height: 150%;
+	}
 }
+
 .row {
+	display: grid;
+	grid-template-columns: 19.5% 14.8% 17.6% 23.3% 15.8% auto;
+	align-items: center;
+	margin: 0 44px 0 38px;
+	padding: 19.4px 0;
+	border-bottom: 1px solid #eeeeee;
+	color: $tableTextColor;
+
 	&__column-name {
 	}
 
@@ -184,16 +251,60 @@ body {
 	}
 
 	&__column-btn {
+		display: inline-block;
+		width: 80px;
+		height: 29px;
+		background: rgba(22, 192, 152, 0.38);
+		border: 1px solid #00b087;
+		border-radius: 4px;
+		padding: 4px 12px;
+		text-align: center;
+		color: #008767;
+	}
+	&._inactive {
+		.row__column-btn {
+			background: #ffc5c5;
+			border: 1px solid #df0404;
+			border-radius: 4px;
+			color: #df0404;
+		}
 	}
 }
-. {
-	&_inactive {
-	}
-}
+
 .pagination {
+	display: flex;
+	align-items: center;
+	gap: 11.2px;
+
 	&__item {
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 100%;
+
+		&._active {
+			.pagination__link {
+				background: #5932ea;
+				border: 1px solid #5932ea;
+				color: #fff;
+			}
+		}
 	}
 
 	&__link {
+		display: flex;
+		justify-content: center;
+		padding: 6px 10px;
+		max-width: 26px;
+		max-height: 24px;
+		background: #f5f5f5;
+		border: 1px solid #eeeeee;
+		border-radius: 4px;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background: #5932ea;
+			border: 1px solid #5932ea;
+			color: #fff;
+		}
 	}
 }

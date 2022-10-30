@@ -168,8 +168,21 @@
             <div class="greeting">Hello Evano 👋🏼,</div>
             <section class="product">
                 <div class="product__header">
-                    <div class="product__name"></div>
-                    <input class="search" type="search" placeholder="Search">
+                    <div class="product__wrapper">
+                        <p class="product__title">All Customers</p>
+                        <span class="product__subtitle">Active Members</span>
+                    </div>
+                    <form class="search">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                                stroke="#7E7E7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M21 21L16.65 16.65" stroke="#7E7E7E" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <input type="text" name="search" placeholder="Search">
+                    </form>
+                    <!-- <input class="search" type="search" placeholder="Search"> -->
                 </div>
                 <div class="product__body">
                     <ul class="product__body-header">
@@ -266,15 +279,16 @@
                     <div class="product__footer-pagination">
                         <ul class="pagination">
                             <li class="pagination__item">
-                                <a href="" class="pagination__link"><svg width="5" height="7" viewBox="0 0 5 7"
-                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <a href="" class="pagination__link">
+                                    <svg width="8" height="12" viewBox="0 0 4 7" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M2.936 6.392L0.176 3.668L2.936 0.944H4.664L1.892 3.668L4.664 6.392H2.936Z"
-                                            fill="#404B52" />
+                                            fill="currentColor" />
                                     </svg>
                                 </a>
                             </li>
-                            <li class="pagination__item"><a href="" class="pagination__link">1</a></li>
+                            <li class="pagination__item _active"><a href="" class="pagination__link">1</a></li>
                             <li class="pagination__item"><a href="" class="pagination__link">2</a></li>
                             <li class="pagination__item"><a href="" class="pagination__link">3</a></li>
                             <li class="pagination__item"><a href="" class="pagination__link">4</a></li>
@@ -282,11 +296,11 @@
                             <li class="pagination__item"><a href="" class="pagination__link">40</a></li>
                             <li class="pagination__item">
                                 <a href="" class="pagination__link">
-                                    <svg width="5" height="7" viewBox="0 0 5 7" fill="none"
+                                    <svg width="8" height="12" viewBox="0 0 4 7" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M0.344 0.944H2.072L4.832 3.668L2.072 6.392H0.344L3.116 3.668L0.344 0.944Z"
-                                            fill="#404B52" />
+                                            fill="currentColor" />
                                     </svg>
                                 </a>
                             </li>
