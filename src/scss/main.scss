@@ -102,9 +102,6 @@
         }
     }
 
-    &__body-row {
-    }
-
     &__footer {
         display: flex;
         align-items: center;
@@ -120,9 +117,6 @@
 
     &__footer-total {
         color: $secondTextColor;
-    }
-
-    &__footer-pagination {
     }
 }
 
@@ -155,24 +149,6 @@
     padding: 19.4px 0;
     border-bottom: 1px solid #eeeeee;
     color: $tableTextColor;
-
-    &__column-name {
-    }
-
-    &__column-company {
-    }
-
-    &__column-phone {
-    }
-
-    &__column-email {
-    }
-
-    &__column-country {
-    }
-
-    &__column-status {
-    }
 
     &__column-btn {
         display: inline-block;

@@ -1,0 +1,1 @@
+test task, adaptive, pixel perfect web layout, use BEM, gulp
