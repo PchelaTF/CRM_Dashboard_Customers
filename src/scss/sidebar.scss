@@ -2,7 +2,7 @@
 	max-height: 1198px;
 	padding: 36px 29px 76px 27px;
 
-	@media (max-width: 767.98px) {
+	@media (max-width: 1439.98px) {
 		position: fixed;
 		transform: translateX(-100%);
 		display: flex;
@@ -16,7 +16,7 @@
 	}
 
 	&._active {
-		@media (max-width: 767.98px) {
+		@media (max-width: 1439.98px) {
 			transform: translateX(0);
 		}
 	}
@@ -24,6 +24,7 @@
 	&__header {
 		display: flex;
 		align-items: center;
+		margin-bottom: 10px;
 	}
 
 	&__header-logo {
@@ -46,7 +47,7 @@
 	&__nav {
 		margin: 56.11px 0 589px;
 
-		@media (max-width: 767.98px) {
+		@media (max-width: 1439.98px) {
 			margin: 0;
 			flex: 0 1 80%;
 		}
