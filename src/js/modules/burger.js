@@ -1,45 +1,33 @@
-// import { scrollToElement } from "./scroll-to-element.js";
-// import scrollLock from 'scroll-lock';
+export const menuBurger = (params) => {
+    const menuIcon = document.querySelector(params.menuIconSelector);
+    const menuIconSpan = menuIcon.querySelector('span');
+    const sideMenu = document.querySelector(params.sideMenuSelector);
+    const body = document.querySelector('body');
 
-// export const menuBurger = (params) => {
+    const substrate = document.createElement('div')
+    substrate.classList.add('_substrate')
 
-//     const menuIcon = document.querySelector(params.menuIconSelector);
-//     const menuBurger = document.querySelector(params.menuBurgerSelector);
-//     const body = document.querySelector('body');
-//     const html = document.documentElement;
+    body.addEventListener('click', e => {
+        console.log(e.target);
 
-//     if (menuIcon) {
-//         menuIcon.addEventListener('click', () => {
-//             if (menuIcon.classList.contains('_active')) {
-//                 closeMenuBurger();
-//             } else {
-//                 openMenuBurger();
-//             }
-//         });
-//     }
+        if (e.target == menuIcon || e.target == menuIconSpan) {
+            openMenuBurger()
+        } else if (e.target == substrate) {
+            closeMenuBurger()
+        }
+    })
 
-//     function openMenuBurger() {
-//         menuIcon.classList.add('_active');
-//         menuBurger.classList.add('_active');
-//         body.classList.add('_lock');
-//         scrollLock.disablePageScroll();
-//     }
+    function openMenuBurger() {
+        menuIcon.classList.add('_active');
+        sideMenu.classList.add('_active');
+        body.classList.add('_lock');
+        body.appendChild(substrate);
+    }
 
-//     function closeMenuBurger() {
-//         body.classList.remove('_lock');
-//         menuIcon.classList.remove('_active');
-//         menuBurger.classList.remove('_active');
-//         scrollLock.enablePageScroll();
-//     }
-
-//     scrollToElement({
-//         selector: '.menu__burger-link[data-goto]',
-//         headerSelector: '.header',
-//         offset: 50,
-//         scrollY: true, // or false
-//     });
-
-//     const burgerLink = document.querySelectorAll('.menu__burger-link[data-goto]');
-
-//     burgerLink.forEach(link => link.addEventListener('click', closeMenuBurger));
-// };
+    function closeMenuBurger() {
+        body.removeChild(substrate);
+        body.classList.remove('_lock');
+        menuIcon.classList.remove('_active');
+        sideMenu.classList.remove('_active');
+    }
+};
