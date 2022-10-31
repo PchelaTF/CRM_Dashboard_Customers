@@ -275,6 +275,7 @@ body._lock {
   border-bottom: 1px solid #eeeeee;
   padding: 0 67px 14px 38px;
   color: #b5b7c0;
+  width: 968px;
 }
 
 .product__body-header:last-child {
@@ -438,6 +439,10 @@ body._lock {
   }
 
   .product__body {
+    margin: 0 auto;
+  }
+
+  .product__body-header {
     margin: 0 auto;
   }
 

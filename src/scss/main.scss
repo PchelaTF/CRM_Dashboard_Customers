@@ -91,6 +91,11 @@
         border-bottom: 1px solid #eeeeee;
         padding: 0 67px 14px 38px;
         color: $secondTextColor;
+        width: 968px;
+
+        @media (max-width: 1439.98px) {
+            margin: 0 auto;
+        }
 
         &:last-child {
             justify-content: center;
